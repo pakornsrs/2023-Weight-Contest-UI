@@ -1,0 +1,148 @@
+ 
+
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="CSS/Login.CSS">
+         
+    <!--<title>Login & Registration Form</title>-->
+
+</head>
+<body onload="pageLoad()">
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form method="post" action="">
+                    <div class="input-field">
+                        <input id="input-username" type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="input-password" type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="RememberMeCheck">
+                            <label for="RememberMeCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input id="loginBtn" type="button" value="Login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+
+                    <div class="input-field">
+                        <input id="created-name" type="text" placeholder="Your apperant name" required>
+                        <i class="uil uil-user"></i>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <input id="created-username" type="text" placeholder="Create a username" required>
+                        <i class="uil uil-user"></i>
+                        
+                    </div>
+                    <div class="input-field">
+                        <input id="created-password" type="password" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input id="re-created-password" type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="input-field-horizontal">
+                        <div>
+                            <input id="init" type="number" placeholder="Initial weight" required>
+                        </div>
+                        <div>
+                            <input id="target" type="number" placeholder="Target weight" required>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        </div>
+                    </div>
+                    
+
+                    <div class="input-field button">
+                        <input id="registerBtn" type="button" value="Signup">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter" id="waiting-sign">
+        <div class="waiting-sign-container">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <div class="filter" id="filter-screen">
+    </div>
+    <div class="popup-normal" id="popup-normal">
+        <div id="top-popup">
+            <p id="top-popup-message">Message</p>
+        </div>
+        <div id="body-popup">
+            <div id="body-popup-content">
+                <div></div>
+                <div id="body-popup-message-div">
+                    <p id="body-popup-message">Message Error</p>
+                </div>
+                <div></div>
+            </div>
+            <div id="button-pannel">
+                <div></div>
+                <input id="popup-close-btn" type="button" value="Close">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="JS/Login.js"></script>
+    <p id=saveIP></p>
+</body>
+</html>
+

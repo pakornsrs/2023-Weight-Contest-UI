@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/Main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="pageLoad()">
+    <div class="main-container">
+        <div class="banner-container">
+
+        </div>
+        <div class="main-content-container">
+            <div class="left-gap">
+            </div>
+            <div class="main-content">
+                <div class="side-bar-info">
+                    <img id="personal-img" src="/Image/personal.png" alt="">
+                    <div class="user-info-container">
+                        <p id="label">Name : </p>
+                        <p class="normal-text" id="normal-text-name"></p>
+                    </div>
+                    <div class="user-info-container">
+                        <p id="label">Initial Weight : </p>
+                        <p class="normal-text" id="normal-text-init-weight"></p>
+                    </div>
+                    <div class="user-info-container">
+                        <p id="label">Target Weight :</p>
+                        <p class="normal-text" id="normal-text-target-weight"></p>
+                    </div>
+                    <div>
+                        <input class="std-button logout" id="loginBtn" type="button" value="LogOut">
+                    </div>
+                </div>
+                <div class="main-content-area">
+                    <div class="main-header">
+                        <p>Weight Record</p>
+                    </div>
+                    <div class="compare-panel">
+                        <div></div>
+                        <p>Compare mode</p>
+                        <label class="switch">
+                            <input type="checkbox" id="compare-mode-switch" onchange="toggleCompareModel(this)">
+                            <span class="slider round"></span>
+                        </label>
+                        <p id="compare-status">On</p>
+                        <div></div>
+                    </div>
+                    <div class="btn-graph-mode">
+                        <canvas id="line-chart-grouped"></canvas>
+                        <p class="not-found" id="not-found-graph">Not found user weight record</p>
+                    </div>
+                    <div class="main-header">
+                        <p>Table Record</p>
+                    </div>
+                    <div class="record-table">
+                        <table id="record-table">
+                            <tr>
+                              <th>NO.</th>
+                              <th>Name</th>
+                              <th>Weight</th>
+                              <th>Submit time</th>
+                              <th>Submit Date</th>
+                              <th>Schdule</th>
+                              <th>Image</th>
+                            </tr>
+                          </table>
+                          <p class="not-found" id="not-found-table">Not found user weight record</p>
+                    </div>
+                    <div class="main-header">
+                        <p>Submit Record</p>
+                    </div>
+                    <div class="submit-record">
+                        <div class="submit-weight-container">
+                            <p class="font-label">Weight</p>
+                            <input id="weight-submit-input" type="number" required style="width: 80px; margin-left: 20px;">
+                            <p class="rare-label">kg.</p>
+                        </div>
+                        <div class="submit-weight-container">
+                            <p class="font-label">Schdule</p>
+                            <select name="schdule" id="weight-submit-schdule" style="width: 250px; margin-left: 20px;">
+                                <!-- <option value="1 Feb 2023">1 Feb 2023</option>
+                                <option value="15 Feb 2023">15 Feb 2023</option> -->
+                            </select>
+                        </div>
+                        <div class="submit-weight-container">
+                            <!-- <p class="font-label">Impge</p> -->
+                            <label id="choose-image" style="text-align: center; padding: 5px;">
+                                <input  id="choose-image-hidden" type="file" multiple = false accept="image/jpeg">
+                                Choose img
+                            </label>
+                            <p class="font-label" id="selected-image-name" style="margin-left: 10px;">No selected impge</p>
+                            <!-- <input id="upload-image" type="button" value="Upload" style="margin-left: 10px;"> -->
+                        </div>
+                    </div>
+                    <div class="submit-button-container">
+                        <div class="submit-cancel-submit">
+                            <input id="weight-submit-btn" type="button" value="Submit">
+                            <input id="clear-submit-btn" type="button" value="Clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-gap">
+                
+            </div>
+            <div class="filter" id="filter-screen">
+                <!-- <div class="waiting-sign-container">
+                    <div class="loader"></div>
+                </div> -->
+            </div>
+            <div class="popup-normal" id="popup-normal">
+                <div id="top-popup">
+                    <p id="top-popup-message">Message</p>
+                </div>
+                <div id="body-popup">
+                    <div id="body-popup-content">
+                        <div></div>
+                        <div id="body-popup-message-div">
+                            <p id="body-popup-message">Message Error</p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div id="button-pannel">
+                        <div></div>
+                        <input id="popup-close-btn" type="button" value="Close">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+
+        </div>
+
+        <script src="JS/Main.js"></script>
+    </div>
+</body>
+</html>
